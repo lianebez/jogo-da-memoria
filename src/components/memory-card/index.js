@@ -64,19 +64,11 @@
 //funcao que cria um elemento, funcao que cria outro elemento e funcao de evento desse elemento
 
 //Arrow function
-const createMemoryCard = nameClass => `
+const createMemoryCard = (src, alt, nameClass) => `
     <article class="memory-card ${nameClass}">
         <img 
-            src="${
-              nameClass == "-front"
-                ? "img/icon-c.png"
-                : "img/icon-collabcode.png"
-            }"
-            alt="${
-                nameClass == "-front"
-                ? "Ícone de um livro de C++" 
-                : "Gueio mascote da CollabCode"
-            }" 
+            src="${src}"
+            alt="${alt}" 
             class="icon" 
             onClick="handlelClick()"
         />
