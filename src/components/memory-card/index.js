@@ -64,31 +64,31 @@
 //funcao que cria um elemento, funcao que cria outro elemento e funcao de evento desse elemento
 
 //Arrow function
-const createMemoryCard = nameClass => {
-    let src = "img/icon-collabcode.png";
-
-    if (nameClass == "-front") {
-        src = "img/icon-c.png"
-    }
-    
-    return `
+const createMemoryCard = nameClass => `
     <article class="memory-card ${nameClass}">
         <img 
-            src="${src}"
-            alt='Gueio mascote da CollabCode' 
-            class='icon' 
-            onClick='handlelClick()'
+            src="${
+              nameClass == "-front"
+                ? "img/icon-c.png"
+                : "img/icon-collabcode.png"
+            }"
+            alt="${
+                nameClass == "-front"
+                ? "Ícone de um livro de C++" 
+                : "Gueio mascote da CollabCode"
+            }" 
+            class="icon" 
+            onClick="handlelClick()"
         />
     </article>
 `;
-};
 
 // const createMemoryCardFront = () => `
 //     <article class="memory-card -front">
-//         <img 
-//             src='img/icon-c.png' 
-//             alt='Gueio mascote da CollabCode' 
-//             class='icon' 
+//         <img
+//             src='img/icon-c.png'
+//             alt='Gueio mascote da CollabCode'
+//             class='icon'
 //             onClick="handlelClick()"
 //         />
 //     </article>
