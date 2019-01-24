@@ -11,13 +11,33 @@ const $memoryCardFront = createMemoryCard(
   "-front"
 ); //criando elemento
 
+const $memoryCardFrontJs = createMemoryCard(
+  "img/icon-js.png",
+  "Ícone de um livro da linguagem Js",
+  "-front"
+); //criando elemento
+
+const $memoryCardFrontCabeca = createMemoryCard(
+  "img/icon-cabeca.png",
+  "Ícone de um livro da Cabeça",
+  "-front"
+); //criando elemento
+
+const $memoryCardFrontJava = createMemoryCard(
+  "img/icon-java.png",
+  "Ícone de um livro da linguagem Java",
+  "-front"
+); //criando elemento
+
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard); //insere as coisas dentro do cards
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontJs);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontJs);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontCabeca);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontCabeca);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontJava);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFrontJava);
 
 $root.insertAdjacentElement("beforeend", $cardsWrapper); //inserindo o cards na tela
