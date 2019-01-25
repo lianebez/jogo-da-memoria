@@ -6,12 +6,29 @@
 //$root.insertBefore($wrapCards, null); //inserir o whaps-cards
 
 function createCardsWrapper() {
-//   const $cardsWrapper = `
-//     <section class="cards-wrapper"></section>
-// `;
+  //   const $cardsWrapper = `
+  //     <section class="cards-wrapper"></section>
+  // `;
 
-const $cardsWrapper = document.createElement("section");
-$cardsWrapper.classList.add("cards-wrapper");
+  const $cardsWrapper = document.createElement("section");
+  $cardsWrapper.classList.add("cards-wrapper");
 
-return $cardsWrapper;
+    const $head = document.querySelector("head"); //pegar o head
+    const $style = document.createElement("style");
+    $style.textContent = `
+        .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 10px;
+        }
+
+        .cards-wrapper > .memory-card {
+        margin-bottom: 10px;
+        }
+    `;
+
+    $head.insertBefore($style, null);//inserir o $style dentro do head antes de ninguém (null) no seu final
+
+    return $cardsWrapper;
 }
