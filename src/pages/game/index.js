@@ -7,6 +7,8 @@ const $cardsWrapper = createCardsWrapper(); //criando elemento
 //   "Gueio mascote da CollabCode"
 // );
 
+const createMemoryCard = memoryCard();
+
 const $memoryCardC = createMemoryCard({
   //objeto JSON
   nameClass: "-front",
